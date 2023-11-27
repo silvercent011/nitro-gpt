@@ -1,4 +1,5 @@
 .nitro
 .output
 .env.local
+.env
 node_modules
