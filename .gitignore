@@ -1,0 +1,4 @@
+.nitro
+.output
+.env.local
+node_modules

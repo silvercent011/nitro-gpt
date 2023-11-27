@@ -1,0 +1,14 @@
+{
+  "name": "nitro-gpt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nitro dev",
+    "build": "nitro build"
+  },
+  "dependencies": {
+    "nitropack": "^2.8.0",
+    "openai": "^4.20.0"
+  }
+}
