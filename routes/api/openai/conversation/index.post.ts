@@ -1,11 +1,24 @@
+import { randomUUID } from "uncrypto";
+
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
 
-  const params = OAIhandleParams(process.env.OPEN_AI_MODEL, body);
+  const { message } = body;
 
-  const conversation = await OAIhandleChat(OpenAiClient, params);
+  const conversation = [{ role: "user", content: message }];
 
-  const payload = OAIhandleMessages(conversation, body);
+  const params = OAIhandleParams(
+    process.env.OPEN_AI_MODEL,
+    conversation as any
+  );
 
-  return payload;
+  const new_conversation = await OAIhandleChat(OpenAiClient, params);
+
+  const payload = OAIhandleMessages(new_conversation, conversation as any);
+
+  const newId = randomUUID();
+
+  await useStorage("db").setItem(newId, { conversation: payload });
+
+  return { id: newId, content: await useStorage("db").getItem(newId) };
 });
