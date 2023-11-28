@@ -1,5 +1,5 @@
 {
-  "name": "nitro-gpt",
+  "name": "nitro-gpt-server",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
