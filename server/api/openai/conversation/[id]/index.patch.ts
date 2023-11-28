@@ -3,7 +3,6 @@ export default defineEventHandler(async (event) => {
   const route_params = getRouterParams(event);
 
   const { id } = route_params;
-  console.log(id);
 
   const { message } = body;
 
