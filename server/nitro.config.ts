@@ -1,11 +1,3 @@
-export default defineNitroConfig({
-  experimental: {
-    openAPI: true,
-  },
-  storage: {
-    db: {
-      driver: "fsLite",
-      base: "./db",
-    },
-  },
-});
+import { sharedConfig } from "./shared.config";
+
+export default defineNitroConfig(sharedConfig);

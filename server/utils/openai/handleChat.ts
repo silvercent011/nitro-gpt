@@ -5,7 +5,7 @@ export async function OAIhandleChat(
   params: OpenAI.Chat.ChatCompletionCreateParams
 ) {
   const ChatCompletion: OpenAI.Chat.ChatCompletion =
-    (await OpenAiClient.chat.completions.create(
+    (await openai.chat.completions.create(
       params
     )) as OpenAI.Chat.ChatCompletion;
   return {
