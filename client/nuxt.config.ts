@@ -2,5 +2,5 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/devtools"],
   devtools: { enabled: true },
-  serverDir: "../api",
+  serverDir: "../server",
 });

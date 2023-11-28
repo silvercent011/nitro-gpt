@@ -8,6 +8,12 @@ Template de uma api rest utilizando [nitro](http://nitro.unjs.io) configurada co
 
 Escolha uma das opções abaixo para instalar as dependências e rodar a api:
 
+```bash
+cd client
+||
+cd server
+```
+
 ### NPM
 
 ```bash
