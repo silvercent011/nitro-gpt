@@ -1,6 +1,6 @@
 import type { OpenAI } from "openai";
 
-export function handleParams(
+export function OAIhandleParams(
   model?: string,
   chatHistory: OpenAI.Chat.ChatCompletionMessageParam[] = []
 ) {

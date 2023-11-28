@@ -1,11 +1,11 @@
 import type { OpenAI } from "openai";
 
-export async function handleChat(
+export async function OAIhandleChat(
   openai: OpenAI,
   params: OpenAI.Chat.ChatCompletionCreateParams
 ) {
   const ChatCompletion: OpenAI.Chat.ChatCompletion =
-    (await openai.chat.completions.create(
+    (await OpenAiClient.chat.completions.create(
       params
     )) as OpenAI.Chat.ChatCompletion;
   return {

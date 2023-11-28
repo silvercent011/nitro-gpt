@@ -1,6 +1,6 @@
 import type { OpenAI } from "openai";
 
-export function handleMessages(
+export function OAIhandleMessages(
   message: { role: string; content: string },
   chatHistory: OpenAI.Chat.ChatCompletionMessageParam[] = []
 ) {
