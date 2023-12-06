@@ -30,16 +30,7 @@ async function handleSubmit() {
       </li>
     </ul>
     <template #user-input>
-      <form @submit.prevent="handleSubmit">
-        <textarea
-          v-model="message"
-          class="border-2"
-          placeholder="Receita de um strogonoff com batata palha..."
-          required
-        ></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
+      <MessageInput v-model="message" @submit="handleSubmit" />
     </template>
   </ChatInterface>
 </template>
